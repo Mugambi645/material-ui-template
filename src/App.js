@@ -1,14 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
-import { Button } from '@mui/material';
+import Sidebar from './components/Sidebar';
+import Feed from './components/Feed';
+import Rightbar from './components/Rightbar';
+import { Box, Container, Stack } from '@mui/material';
 
 function App() {
   return (
-    <div>
-<Button variant="text">Text</Button>
-<Button variant="contained" color='secondary' size='small'>Contained</Button>
-<Button disabled  variant="outlined">Outlined</Button>
-    </div>
+<Box>
+  {/*navbar*/}
+<Stack direction="row" spacing={2} justifyContent="space-between">
+<Sidebar/>
+<Feed/>
+<Rightbar/>
+</Stack>
+</Box>
   );
 }
 
